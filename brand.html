@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand sheet · SB—120 · Siddharth Bhat</title>
+<meta name="description" content="The brand identity behind Siddharth Bhat's portfolio: two-ink risograph, type, marks and voice.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=7">
+<style>
+  .b-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
+  .tile { border: 1.5px solid var(--ink); background: var(--paper); padding: 24px; position: relative; min-height: 220px; }
+  .tile .lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .span-4 { grid-column: span 4; } .span-6 { grid-column: span 6; } .span-8 { grid-column: span 8; } .span-12 { grid-column: span 12; } .span-3 { grid-column: span 3; }
+  .sw { min-height: 200px; display: flex; flex-direction: column; justify-content: flex-end; padding: 18px; border: 1.5px solid var(--ink); font-family: var(--f-mono); font-size: 12px; line-height: 1.6; }
+  .sw b { font-family: var(--f-display); font-size: 26px; font-weight: 800; font-variation-settings: "wdth" 80; text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: -.01em; }
+  .mark-big { display: grid; place-items: center; min-height: 340px; }
+  .mark-big svg { width: min(280px, 70%); }
+  .type-a { font-size: clamp(70px, 10vw, 150px); font-weight: 800; font-variation-settings: "wdth" 75; line-height: .85; letter-spacing: -.04em; text-transform: uppercase; margin: 12px 0; }
+  .type-b { font-family: var(--f-serif); font-style: italic; font-size: clamp(54px, 7vw, 100px); line-height: 1; margin: 12px 0; color: var(--blue); }
+  .type-c { font-family: var(--f-mono); font-size: 22px; margin: 18px 0; }
+  .rules { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .rules li { padding-left: 26px; position: relative; } .rules li::before { content: "✺"; color: var(--pink); position: absolute; left: 0; }
+  .rules li.no::before { content: "✕"; color: var(--ink); }
+  .voice p { font-size: 20px; margin: 10px 0; }
+  .voice .bad { text-decoration: line-through; text-decoration-color: var(--pink); text-decoration-thickness: 3px; color: var(--muted); }
+  @media (max-width: 900px) { .span-4, .span-6, .span-8, .span-3 { grid-column: span 12; } }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="mast scrolled">
+  <a class="logo" href="index.html" aria-label="Back to the portfolio">
+    <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="20" r="12" fill="#2b3bd6" style="mix-blend-mode:multiply"/><circle cx="25" cy="20" r="12" fill="#ff48b0" style="mix-blend-mode:multiply"/></svg>
+    <span>sb—120</span>
+  </a>
+  <nav><a href="index.html">← Back to the issue</a></nav>
+  <span class="issue">Brand sheet · v1.0</span>
+</header>
+
+<main class="wrap" style="padding-top:120px;padding-bottom:100px">
+  <div class="folio"><span><b>BRAND SHEET</b> — SB—120</span><span>Identity system for Siddharth Bhat</span></div>
+  <span class="kicker ink-pink">Identity</span>
+  <h1 class="h-section">Two inks, <span class="serif">one voice</span></h1>
+  <p class="lede" style="margin:24px 0 60px">SB—120 treats a developer portfolio like a risograph zine: limited inks, honest misprints, real paper. The constraint is the point. Software should be built the same way: on purpose, and nothing extra.</p>
+
+  <div class="b-grid">
+    <div class="tile span-6 mark-big">
+      <span class="lbl" style="position:absolute;top:18px;left:20px">01 · The mark: “overprint”</span>
+      <svg viewBox="0 0 40 40" aria-label="SB-120 mark, two overlapping circles in pink and blue"><circle cx="15" cy="20" r="12" fill="#2b3bd6" style="mix-blend-mode:multiply"/><circle cx="25" cy="20" r="12" fill="#ff48b0" style="mix-blend-mode:multiply"/></svg>
+      <p style="position:absolute;bottom:14px;left:20px;right:20px;margin:0;font-size:15px;color:#3a3845">Two plates, one overlap. Code and design, human and AI, and the purple where they meet.</p>
+    </div>
+    <div class="tile span-6" style="display:flex;flex-direction:column;justify-content:space-between">
+      <span class="lbl">02 · Wordmark &amp; name</span>
+      <div style="font-size:clamp(70px,11vw,160px);font-weight:800;font-variation-settings:'wdth' 75;letter-spacing:-.04em;line-height:.9">sb—120</div>
+      <p style="margin:0;font-size:15px;color:#3a3845"><b>SB</b> for Siddharth Bhat. <b>120</b> from the GitHub handle, and the issue number. The em dash is the gap between idea and shipped.</p>
+    </div>
+
+    <div class="sw span-3" style="background:var(--pink)"><b>Fluoro Pink</b>#FF48B0 · accents, energy, CTAs</div>
+    <div class="sw span-3" style="background:var(--blue);color:var(--paper)"><b>Riso Blue</b>#2B3BD6 · structure, trust, resume</div>
+    <div class="sw span-3" style="background:var(--paper)"><b>Paper</b>#F2EDE3 · always under grain</div>
+    <div class="sw span-3" style="background:var(--ink);color:var(--paper)"><b>Ink</b>#1B1A24 · type &amp; rules</div>
+
+    <div class="tile span-8">
+      <span class="lbl">03 · Type</span>
+      <div class="type-a">Bricolage</div>
+      <div class="type-b">Instrument Serif</div>
+      <div class="type-c">JetBrains Mono — folios, code, captions</div>
+      <p style="margin:0;font-size:15px;color:#3a3845">Condensed grotesque for headlines (wdth 75), an italic serif for the human aside, monospace for anything a machine would say.</p>
+    </div>
+    <div class="tile span-4">
+      <span class="lbl">04 · Spot ink</span>
+      <div class="sw" style="background:var(--yellow);margin-top:14px;min-height:150px"><b>Highlighter</b>#FFE14D · max one per screen</div>
+    </div>
+
+    <div class="tile span-6">
+      <span class="lbl">05 · Rules of the press</span>
+      <ul class="rules">
+        <li>Overlap pink and blue with <i>multiply</i>, never fake the purple.</li>
+        <li>Misregister 2–6px. Perfect alignment looks digital.</li>
+        <li>Every illustration is drawn in code, in two inks.</li>
+        <li>Motion is mechanical: stamps, rollers, slides, not floaty fades.</li>
+        <li class="no">No gradients, no glassmorphism, no stock 3D blobs.</li>
+        <li class="no">No more than two inks plus one spot per view.</li>
+      </ul>
+    </div>
+    <div class="tile span-6 voice">
+      <span class="lbl">06 · Voice</span>
+      <p class="bad">“Passionate, highly motivated self-starter.”</p>
+      <p>“I build enterprise software with AI. Less cost. Less time.”</p>
+      <p class="bad">“Leveraged synergies across the stack.”</p>
+      <p>“47 endpoints. 69 tests. It ships.”</p>
+      <p style="font-size:15px;color:var(--muted);margin-top:16px">Short, specific, a little playful. Numbers over adjectives.</p>
+    </div>
+
+    <div class="tile span-12" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;min-height:auto">
+      <div><span class="lbl">07 · Components</span><p style="margin:6px 0 0;font-size:15px;color:#3a3845">Rubber-stamp buttons, tear-off coupons, stickers, registration marks, folios.</p></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a class="btn solid" href="index.html">Primary <span class="arr">→</span></a>
+        <a class="btn pink" href="index.html#resume">Pink <span class="arr">↓</span></a>
+        <span class="sticker" style="position:static"><span class="dot"></span>Sticker</span>
+        <span class="reg" style="position:relative;display:inline-block" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
