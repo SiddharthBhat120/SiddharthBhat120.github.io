@@ -422,6 +422,9 @@ section { position: relative; }
 .scan { animation: scan 2.2s ease-in-out infinite alternate; }
 @keyframes twinkle { 50% { opacity: .2; transform: scale(.6); } }
 .tw { transform-box: fill-box; transform-origin: center; animation: twinkle 2.4s ease-in-out infinite; }
+/* Beam Share art: files flying along the beam */
+@keyframes beamfly { 0% { transform: translate(112px,140px) rotate(-12deg); opacity: 0; } 12% { opacity: 1; } 50% { transform: translate(182px,92px) rotate(4deg); } 88% { opacity: 1; } 100% { transform: translate(250px,122px) rotate(12deg); opacity: 0; } }
+.fly { animation: beamfly 3.3s ease-in-out infinite; }
 
 .also { margin-top: 30px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
 .also a { color: var(--ink); }

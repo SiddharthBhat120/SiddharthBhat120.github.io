@@ -50,11 +50,12 @@
       ],
       projects: () => [
         ['01  TaskFlow      enterprise PM platform · 47 endpoints · RBAC', ''],
-        ['02  CrowdMate     QR queues + safety tags · 69 tests · offline-first', ''],
-        ['03  Paroh         AI digital twin · front-end lead', ''],
-        ['04  PixelStore    gaming e-commerce · atomic stock', ''],
-        ['05  Qualify Milk  10 ML models, honestly scored', ''],
-        ['06  HabitTracker  native android · kotlin + compose', ''],
+        ['02  Beam Share    offline file transfer · android ⇄ iphone ⇄ windows', ''],
+        ['03  CrowdMate     QR queues + safety tags · 69 tests · offline-first', ''],
+        ['04  Paroh         AI digital twin · front-end lead', ''],
+        ['05  PixelStore    gaming e-commerce · atomic stock', ''],
+        ['06  Qualify Milk  10 ML models, honestly scored', ''],
+        ['07  HabitTracker  native android · kotlin + compose', ''],
         ['→ scrolling you to them…', 'bl', () => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })]
       ],
       skills: () => [
@@ -80,7 +81,7 @@
         ['permission granted. ✓', 'ok'],
         ['siddharth has been added to your team. onboarding starts monday.', 'acc']
       ],
-      ls: () => [['taskflow/  crowdmate/  paroh/  pixelstore/  qualify-milk/  habit-tracker/  resume.pdf  secrets.txt', '']],
+      ls: () => [['taskflow/  beam-share/  crowdmate/  paroh/  pixelstore/  qualify-milk/  habit-tracker/  resume.pdf  secrets.txt', '']],
       'cat secrets.txt': () => [['nice try 😄 the only secret: I actually enjoy writing tests.', 'acc']],
       date: () => [[new Date().toString(), '']],
       exit: () => [['you can check out any time you like, but you can never leave. (scroll up ↑)', 'dim']],
