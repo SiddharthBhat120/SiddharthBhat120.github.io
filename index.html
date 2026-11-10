@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -109,7 +109,7 @@
           <li><a href="#pitch"><span class="n">p.04</span><span class="t">The pitch</span><span class="d">why AI × me</span></a></li>
           <li><a href="#work"><span class="n">p.06</span><span class="t">Features</span><span class="d">six things I built</span></a></li>
           <li><a href="#skills"><span class="n">p.18</span><span class="t">Sticker sheet</span><span class="d">skills, peel &amp; stick</span></a></li>
-          <li><a href="#play"><span class="n">p.20</span><span class="t">Back pages</span><span class="d">games &amp; toys</span></a></li>
+          <li><a href="#play"><span class="n">p.20</span><span class="t">Back pages</span><span class="d">snake, puzzles &amp; toys</span></a></li>
           <li><a href="#resume"><span class="n">p.24</span><span class="t">Take-home copy</span><span class="d">the resume</span></a></li>
           <li><a href="#contact"><span class="n">p.26</span><span class="t">Say hello</span><span class="d">colophon</span></a></li>
         </ol>
@@ -437,7 +437,7 @@
         <span class="kicker ink-blue">Back pages</span>
         <h2 class="h-section" id="play-h">Activity <span class="serif">corner</span></h2>
       </div>
-      <p class="lede rv d1">Every good zine ends with puzzles. Talk to my terminal, fix a misprint, print your own poster, or price a project.</p>
+      <p class="lede rv d1">Every good zine ends with puzzles. Talk to my terminal, play snake, solve a puzzle, fix a misprint, print your own poster, or price a project.</p>
     </div>
 
     <div class="play-grid">
@@ -524,6 +524,72 @@
         <p class="saving" id="saving">You save <b>0 weeks</b></p>
         <p class="fine">* playful, illustrative estimate of one developer's effort, not a quote.</p>
       </div>
+
+      <!-- snake -->
+      <div class="card c-snake rv">
+        <span class="num-tab">Activity 05 · game</span>
+        <h4>Ink Snake</h4>
+        <p class="sub">Eat the fruit, grow the snake, collect my stack. Arrow keys / WASD, swipe, or the pad. Don't bite yourself.</p>
+        <div class="snake-wrap">
+          <div class="snake-stage" id="snakeStage" tabindex="0" aria-label="Snake game. Press Enter or Space to start, arrow keys to steer.">
+            <canvas id="snake" width="400" height="400"></canvas>
+            <div class="game-over" id="snakeOverlay">
+              <div class="go-card">
+                <b id="snakeTitle">Ink Snake</b>
+                <span id="snakeMsg">Each fruit is a skill. How many can you collect?</span>
+                <button class="btn pink" type="button" id="snakeStart">Start ▸</button>
+              </div>
+            </div>
+          </div>
+          <div class="snake-side">
+            <div class="scorebox"><span>Score</span><b id="snakeScore">0</b></div>
+            <div class="scorebox"><span>Best</span><b id="snakeBest">0</b></div>
+            <div class="ate"><span>Collected</span><p id="snakeAte">nothing yet…</p></div>
+            <div class="dpad" aria-label="Direction pad">
+              <button type="button" data-d="up" aria-label="Up">▲</button>
+              <button type="button" data-d="left" aria-label="Left">◀</button>
+              <button type="button" data-d="pause" aria-label="Pause or start">❚❚</button>
+              <button type="button" data-d="right" aria-label="Right">▶</button>
+              <button type="button" data-d="down" aria-label="Down">▼</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sliding puzzle -->
+      <div class="card c-slide rv d1">
+        <span class="num-tab">Activity 06 · puzzle</span>
+        <h4>Slide the print</h4>
+        <p class="sub">The poster got cut up at the press. Slide the tiles back into place. Hold <b>Peek</b> to see the original.</p>
+        <div class="slide-board" id="slideBoard" tabindex="0" aria-label="Sliding puzzle. Click a tile next to the gap, or use arrow keys."></div>
+        <div class="reg-ui">
+          <span class="score" id="slideInfo">Moves 0 · 0:00</span>
+          <span style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" type="button" id="slidePeek" style="padding:10px 14px;font-size:12px">Peek 👁</button>
+            <button class="btn blue" type="button" id="slideShuffle" style="padding:10px 14px;font-size:12px">Shuffle</button>
+          </span>
+        </div>
+        <div class="seg" id="slideSize" role="group" aria-label="Puzzle size">
+          <button type="button" data-n="3" aria-pressed="true">3×3 easy</button>
+          <button type="button" data-n="4" aria-pressed="false">4×4 hard</button>
+        </div>
+      </div>
+
+      <!-- memory -->
+      <div class="card c-memory rv">
+        <span class="num-tab">Activity 07 · puzzle</span>
+        <div class="mem-head">
+          <div>
+            <h4>Ink pairs</h4>
+            <p class="sub" style="margin-bottom:0">Flip two cards, match the stack. Fewer moves = better memory (and better hire).</p>
+          </div>
+          <div class="mem-stats">
+            <span class="score" id="memInfo">Moves 0 · Pairs 0/8</span>
+            <button class="btn pink" type="button" id="memReset" style="padding:10px 14px;font-size:12px">New game</button>
+          </div>
+        </div>
+        <div class="mem-grid" id="memGrid"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -593,7 +659,8 @@
 </section>
 </main>
 
-<script src="js/main.js?v=7"></script>
-<script src="js/play.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
+<script src="js/play.js?v=8"></script>
+<script src="js/games.js?v=8"></script>
 </body>
 </html>
