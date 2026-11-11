@@ -650,7 +650,9 @@
           <p class="deck rv">Ride with a phone on the handlebar, get back a map of every pothole on the road.</p>
           <p class="body">A fine-tuned YOLO11 model finds potholes in dashcam video, ByteTrack follows each one across frames so it is counted once, and the GPS track from the same ride puts it on the map with a size estimate and a blurred photo. Repeat rides merge into "seen 3×", and a PDF groups the worst potholes by road for the city corporation.</p>
           <ul class="wins">
-            WINS
+            <li>Fine-tuned YOLO11n reaches <b>0.62 mAP50</b> on held-out test photos, 0.86 recall on close potholes</li>
+            <li>Tracking turns <b>1,238 raw detections into 22 map dots</b> with zero double counts on a ride with known answers</li>
+            <li>Caught that <b>57% of the dataset had near-twin photos</b> and split by twin group so the test score is honest</li>
           </ul>
           <div class="stack"><span>Python</span><span>YOLO11</span><span>ByteTrack</span><span>OpenCV</span><span>FastAPI</span><span>React</span><span>Leaflet</span></div>
           <div class="links"><a class="btn" href="https://github.com/SiddharthBhat120/POTSPOT" target="_blank" rel="noopener">Code <span class="arr">↗</span></a><a class="btn" href="https://siddharthbhat120.github.io/POTSPOT/" target="_blank" rel="noopener">Live demo <span class="arr">↗</span></a></div>
