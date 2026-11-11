@@ -56,6 +56,8 @@
         ['05  PixelStore    gaming e-commerce · atomic stock', ''],
         ['06  Qualify Milk  10 ML models, honestly scored', ''],
         ['07  HabitTracker  native android · kotlin + compose', ''],
+        ['08  TermGuard     rent & offer-letter checker · every point quoted', ''],
+        ['09  BlackBox      incident timeline · 34k log lines → 23 moments', ''],
         ['→ scrolling you to them…', 'bl', () => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })]
       ],
       skills: () => [

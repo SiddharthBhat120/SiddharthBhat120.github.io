@@ -425,6 +425,12 @@ section { position: relative; }
 /* Beam Share art: files flying along the beam */
 @keyframes beamfly { 0% { transform: translate(112px,140px) rotate(-12deg); opacity: 0; } 12% { opacity: 1; } 50% { transform: translate(182px,92px) rotate(4deg); } 88% { opacity: 1; } 100% { transform: translate(250px,122px) rotate(12deg); opacity: 0; } }
 .fly { animation: beamfly 3.3s ease-in-out infinite; }
+/* TermGuard art: highlighter sweeping across risky lines */
+@keyframes hlsweep { 0%, 15% { transform: scaleX(0); } 45%, 100% { transform: scaleX(1); } }
+.hlsweep { transform-box: fill-box; transform-origin: left center; animation: hlsweep 4.5s var(--ease) infinite alternate; }
+/* BlackBox art: playhead replaying the incident */
+@keyframes playhead { from { transform: translateX(0); } to { transform: translateX(320px); } }
+.playhead { animation: playhead 7s linear infinite; }
 
 .also { margin-top: 30px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
 .also a { color: var(--ink); }
