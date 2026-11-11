@@ -58,6 +58,7 @@
         ['07  HabitTracker  native android · kotlin + compose', ''],
         ['08  TermGuard     rent & offer-letter checker · every point quoted', ''],
         ['09  BlackBox      incident timeline · 34k log lines → 23 moments', ''],
+        ['10  Humanize AI   writing suite · 10 modes · every edit explained', ''],
         ['→ scrolling you to them…', 'bl', () => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })]
       ],
       skills: () => [
