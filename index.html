@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
   <nav aria-label="Sections">
     <a href="#work">Work</a>
     <a href="#skills" class="opt">Skills</a>
-    <a href="#play">Play</a>
+    <a href="play.html">Play</a>
     <a href="#resume">Resume</a>
     <a href="#contact" class="opt">Contact</a>
   </nav>
@@ -109,7 +109,7 @@
           <li><a href="#pitch"><span class="n">p.04</span><span class="t">The pitch</span><span class="d">why AI × me</span></a></li>
           <li><a href="#work"><span class="n">p.06</span><span class="t">Features</span><span class="d">thirteen things I built</span></a></li>
           <li><a href="#skills"><span class="n">p.18</span><span class="t">Sticker sheet</span><span class="d">skills, peel &amp; stick</span></a></li>
-          <li><a href="#play"><span class="n">p.20</span><span class="t">Back pages</span><span class="d">snake, puzzles &amp; toys</span></a></li>
+          <li><a href="play.html"><span class="n">p.20</span><span class="t">Back pages</span><span class="d">snake, puzzles &amp; toys</span></a></li>
           <li><a href="#resume"><span class="n">p.24</span><span class="t">Take-home copy</span><span class="d">the resume</span></a></li>
           <li><a href="#contact"><span class="n">p.26</span><span class="t">Say hello</span><span class="d">colophon</span></a></li>
         </ol>
@@ -791,10 +791,10 @@
       <span class="sheet-hint">✂ drag the stickers</span>
     </div>
     <div class="skill-legend">
-      <div><h5><i style="background:var(--pink)"></i>Frontend</h5><p>React, Angular 19, TypeScript, PWAs, Framer Motion, Jetpack Compose, accessible UI.</p></div>
-      <div><h5><i style="background:var(--blue)"></i>Backend</h5><p>Node.js, Express, REST, Socket.IO, Flask, JWT &amp; RBAC, Electron, Capacitor.</p></div>
-      <div><h5><i style="background:var(--yellow)"></i>Data &amp; AI</h5><p>MongoDB, MySQL, SQLite, IndexedDB, Room; scikit-learn, pandas, LLM integration.</p></div>
-      <div><h5><i style="background:var(--ink)"></i>Craft</h5><p>Git, CI, Vitest, Playwright, WCAG audits, Linux, AI-assisted dev &amp; review.</p></div>
+      <div><h5><i style="background:var(--pink)"></i>Frontend</h5><p>React, Next.js, Angular 19, TypeScript, Tailwind, PWAs, Flutter, Jetpack Compose, accessible UI.</p></div>
+      <div><h5><i style="background:var(--blue)"></i>Backend</h5><p>Node.js, Express, FastAPI, Flask, REST, Socket.IO, JWT &amp; RBAC, background job queues, Docker.</p></div>
+      <div><h5><i style="background:var(--yellow)"></i>Data &amp; AI</h5><p>MongoDB, MySQL, SQLite, IndexedDB; scikit-learn, YOLO + OpenCV, Whisper speech-to-text, local LLMs with Ollama.</p></div>
+      <div><h5><i style="background:var(--ink)"></i>Craft</h5><p>Git, GitHub Actions CI, pytest, Vitest, Playwright, FFmpeg, WCAG audits, Linux, AI-assisted dev &amp; review.</p></div>
     </div>
     <div class="skill-legend soft-row">
       <div><h5><i style="background:var(--paper)"></i>Soft skills</h5><p>Problem solving · Adaptability · Self-learning · Communication · Team coordination · Attention to detail.</p></div>
@@ -804,168 +804,26 @@
   </div>
 </section>
 
-<!-- ============ PLAYGROUND ============ -->
+<!-- ============ PLAYGROUND (teaser; games live on play.html) ============ -->
 <section class="page" id="play" aria-labelledby="play-h">
   <div class="wrap">
     <div class="folio"><span><b>p.20</b> — Back pages</span><span>Games, toys &amp; activities</span></div>
-    <div class="work-head" style="margin-bottom:0">
+    <div class="play-teaser">
       <div class="rv">
         <span class="kicker ink-blue">Back pages</span>
         <h2 class="h-section" id="play-h">Activity <span class="serif">corner</span></h2>
+        <p class="lede">Every good zine ends with puzzles. Seven little toys, on their own page so this one stays short.</p>
+        <a class="btn solid play-cta" href="play.html">Open the activity corner <span class="arr">→</span></a>
       </div>
-      <p class="lede rv d1">Every good zine ends with puzzles. Talk to my terminal, play snake, solve a puzzle, fix a misprint, print your own poster, or price a project.</p>
-    </div>
-
-    <div class="play-grid">
-      <!-- console -->
-      <div class="card c-console rv">
-        <span class="num-tab">Activity 01</span>
-        <h4>Talk to the terminal</h4>
-        <p class="sub">Type <span class="mono">say("hi")</span> and press enter. Try <span class="mono">help</span> for everything else.</p>
-        <div class="term">
-          <div class="term-bar"><i></i><i></i><i></i><span>sid@zine — zsh — 80×24</span></div>
-          <div class="term-out" id="termOut" aria-live="polite"></div>
-          <form class="term-in" id="termForm" autocomplete="off">
-            <label for="termIn">$</label>
-            <input id="termIn" type="text" spellcheck="false" autocapitalize="off" placeholder='say("hi")' aria-label="Terminal command">
-          </form>
-        </div>
-        <div class="chips" id="termChips">
-          <button type="button">say("hi")</button><button type="button">whoami</button><button type="button">projects</button>
-          <button type="button">hire()</button><button type="button">coffee</button><button type="button">joke</button><button type="button">sudo hire siddharth</button>
-        </div>
-      </div>
-
-      <!-- register game -->
-      <div class="card c-register rv d1">
-        <span class="num-tab">Activity 02</span>
-        <h4>Fix the misprint</h4>
-        <p class="sub">The pink plate slipped. Drag it (or use arrow keys) until it lines up with the blue, then pull the print.</p>
-        <div class="reg-stage" id="regStage" tabindex="0" aria-label="Misregistration game. Use arrow keys to move the pink layer.">
-          <div class="reg-layer l1" aria-hidden="true"><svg viewBox="0 0 100 100" id="regSvg1"></svg></div>
-          <div class="reg-layer l2" id="regPink" aria-hidden="true"><svg viewBox="0 0 100 100" id="regSvg2"></svg></div>
-          <div class="reg-verdict" id="regVerdict"></div>
-        </div>
-        <div class="reg-ui">
-          <span class="score" id="regScore">Round 1/3 · score 0</span>
-          <button class="btn blue" type="button" id="regPull" style="padding:10px 14px;font-size:12px">Pull print</button>
-        </div>
-      </div>
-
-      <!-- poster maker -->
-      <div class="card c-poster rv">
-        <span class="num-tab">Activity 03 · creative</span>
-        <h4>Print your own poster</h4>
-        <p class="sub">A tiny risograph in your browser. Type a word, choose your inks, shake the layout, and take it home as a PNG.</p>
-        <div class="poster-wrap">
-          <canvas id="poster" width="600" height="800" aria-label="Your generated riso poster"></canvas>
-          <div>
-            <div class="field"><label for="posterWord">Your word</label><input id="posterWord" type="text" maxlength="14" value="HELLO"></div>
-            <div class="field"><span class="lbl">Inks</span>
-              <div class="swatches" id="inks">
-                <button type="button" aria-pressed="true" aria-label="Pink and blue" data-a="#ff48b0" data-b="#2b3bd6"><span style="background:#ff48b0"></span><span style="background:#2b3bd6"></span></button>
-                <button type="button" aria-pressed="false" aria-label="Yellow and blue" data-a="#ffe14d" data-b="#2b3bd6"><span style="background:#ffe14d"></span><span style="background:#2b3bd6"></span></button>
-                <button type="button" aria-pressed="false" aria-label="Orange and teal" data-a="#ff6c2f" data-b="#00838a"><span style="background:#ff6c2f"></span><span style="background:#00838a"></span></button>
-                <button type="button" aria-pressed="false" aria-label="Green and pink" data-a="#00a95c" data-b="#ff48b0"><span style="background:#00a95c"></span><span style="background:#ff48b0"></span></button>
-              </div>
-            </div>
-            <div class="field"><label for="posterMis">Misregistration</label><input id="posterMis" type="range" min="0" max="30" value="8"></div>
-            <div class="poster-btns">
-              <button class="btn pink" type="button" id="posterShake">Shake layout ✺</button>
-              <button class="btn solid" type="button" id="posterSave">Download PNG ↓</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- estimator -->
-      <div class="card c-estimate rv d1">
-        <span class="num-tab">Activity 04</span>
-        <h4>Price-a-project</h4>
-        <p class="sub">Pick the modules your business needs. See the effort the classic way vs. how I build with AI.</p>
-        <div class="mods" id="mods">
-          <label><input type="checkbox" value="3" checked><span>Login &amp; roles</span></label>
-          <label><input type="checkbox" value="4" checked><span>Admin dashboard</span></label>
-          <label><input type="checkbox" value="4"><span>Real-time chat</span></label>
-          <label><input type="checkbox" value="3"><span>Reports &amp; charts</span></label>
-          <label><input type="checkbox" value="5"><span>Payments</span></label>
-          <label><input type="checkbox" value="4"><span>AI insights</span></label>
-          <label><input type="checkbox" value="6"><span>Mobile app</span></label>
-          <label><input type="checkbox" value="3"><span>Offline mode</span></label>
-        </div>
-        <div class="bars">
-          <div class="bar-row"><div class="lbl"><span>Classic build</span><span id="tradW">0 wks</span></div><div class="bar trad"><i id="tradBar"></i></div></div>
-          <div class="bar-row"><div class="lbl"><span>Sid × AI</span><span id="aiW">0 wks</span></div><div class="bar ai"><i id="aiBar"></i></div></div>
-        </div>
-        <p class="saving" id="saving">You save <b>0 weeks</b></p>
-        <p class="fine">* playful, illustrative estimate of one developer's effort, not a quote.</p>
-      </div>
-
-      <!-- snake -->
-      <div class="card c-snake rv">
-        <span class="num-tab">Activity 05 · game</span>
-        <h4>Ink Snake</h4>
-        <p class="sub">Eat the fruit, grow the snake, collect my stack. Arrow keys / WASD, swipe, or the pad. Don't bite yourself.</p>
-        <div class="snake-wrap">
-          <div class="snake-stage" id="snakeStage" tabindex="0" aria-label="Snake game. Press Enter or Space to start, arrow keys to steer.">
-            <canvas id="snake" width="400" height="400"></canvas>
-            <div class="game-over" id="snakeOverlay">
-              <div class="go-card">
-                <b id="snakeTitle">Ink Snake</b>
-                <span id="snakeMsg">Each fruit is a skill. How many can you collect?</span>
-                <button class="btn pink" type="button" id="snakeStart">Start ▸</button>
-              </div>
-            </div>
-          </div>
-          <div class="snake-side">
-            <div class="scorebox"><span>Score</span><b id="snakeScore">0</b></div>
-            <div class="scorebox"><span>Best</span><b id="snakeBest">0</b></div>
-            <div class="ate"><span>Collected</span><p id="snakeAte">nothing yet…</p></div>
-            <div class="dpad" aria-label="Direction pad">
-              <button type="button" data-d="up" aria-label="Up">▲</button>
-              <button type="button" data-d="left" aria-label="Left">◀</button>
-              <button type="button" data-d="pause" aria-label="Pause or start">❚❚</button>
-              <button type="button" data-d="right" aria-label="Right">▶</button>
-              <button type="button" data-d="down" aria-label="Down">▼</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- sliding puzzle -->
-      <div class="card c-slide rv d1">
-        <span class="num-tab">Activity 06 · puzzle</span>
-        <h4>Slide the print</h4>
-        <p class="sub">The poster got cut up at the press. Slide the tiles back into place. Hold <b>Peek</b> to see the original.</p>
-        <div class="slide-board" id="slideBoard" tabindex="0" aria-label="Sliding puzzle. Click a tile next to the gap, or use arrow keys."></div>
-        <div class="reg-ui">
-          <span class="score" id="slideInfo">Moves 0 · 0:00</span>
-          <span style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="btn" type="button" id="slidePeek" style="padding:10px 14px;font-size:12px">Peek 👁</button>
-            <button class="btn blue" type="button" id="slideShuffle" style="padding:10px 14px;font-size:12px">Shuffle</button>
-          </span>
-        </div>
-        <div class="seg" id="slideSize" role="group" aria-label="Puzzle size">
-          <button type="button" data-n="3" aria-pressed="true">3×3 easy</button>
-          <button type="button" data-n="4" aria-pressed="false">4×4 hard</button>
-        </div>
-      </div>
-
-      <!-- memory -->
-      <div class="card c-memory rv">
-        <span class="num-tab">Activity 07 · puzzle</span>
-        <div class="mem-head">
-          <div>
-            <h4>Ink pairs</h4>
-            <p class="sub" style="margin-bottom:0">Flip two cards, match the stack. Fewer moves = better memory (and better hire).</p>
-          </div>
-          <div class="mem-stats">
-            <span class="score" id="memInfo">Moves 0 · Pairs 0/8</span>
-            <button class="btn pink" type="button" id="memReset" style="padding:10px 14px;font-size:12px">New game</button>
-          </div>
-        </div>
-        <div class="mem-grid" id="memGrid"></div>
-      </div>
+      <ol class="play-list rv d1" aria-label="What's in the activity corner">
+        <li><a href="play.html#act-terminal"><b>01</b> Talk to the terminal</a></li>
+        <li><a href="play.html#act-misprint"><b>02</b> Fix the misprint</a></li>
+        <li><a href="play.html#act-poster"><b>03</b> Print your own poster</a></li>
+        <li><a href="play.html#act-price"><b>04</b> Price-a-project</a></li>
+        <li><a href="play.html#act-snake"><b>05</b> Ink Snake</a></li>
+        <li><a href="play.html#act-slide"><b>06</b> Slide the print</a></li>
+        <li><a href="play.html#act-pairs"><b>07</b> Ink pairs</a></li>
+      </ol>
     </div>
   </div>
 </section>
@@ -1035,8 +893,6 @@
 </section>
 </main>
 
-<script src="js/main.js?v=12"></script>
-<script src="js/play.js?v=12"></script>
-<script src="js/games.js?v=12"></script>
+<script src="js/main.js?v=13"></script>
 </body>
 </html>

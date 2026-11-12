@@ -62,7 +62,7 @@
         ['11  PotSpot       pothole map from dashcam video · one dot per hole', ''],
         ['12  Tokenomy      LLM gateway · cache, smart cache, cheap/strong routing', ''],
         ['13  HypeSift AI   long video → captioned shorts · explainable scores', ''],
-        ['→ scrolling you to them…', 'bl', () => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })]
+        ['→ taking you to them…', 'bl', () => { const w = document.getElementById('work'); if (w) w.scrollIntoView({ behavior: 'smooth' }); else location.href = 'index.html#work'; }]
       ],
       skills: () => [
         ['frontend  react · angular · typescript · compose', ''],

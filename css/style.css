@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 body {
   margin: 0;
   background: var(--paper);
@@ -822,3 +822,22 @@ section { position: relative; }
   .snake-side .ate { grid-column: 1 / -1; min-height: 0; }
   .snake-side .dpad { grid-column: 1 / -1; width: 180px; justify-self: center; }
 }
+
+/* ---------- activity corner: teaser on the home page + its own page ---------- */
+.play-teaser { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.play-teaser .lede { margin-top: 14px; }
+.play-cta { margin-top: 26px; }
+.play-list { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--ink); }
+.play-list li { border-bottom: 1.5px solid var(--ink); }
+.play-list a {
+  display: flex; align-items: baseline; gap: 16px; padding: 13px 4px; color: var(--ink); text-decoration: none;
+  font-weight: 700; font-size: clamp(17px, 1.6vw, 21px); transition: padding .25s var(--ease), color .2s;
+}
+.play-list a b { font-family: var(--f-mono); font-size: 12px; font-weight: 700; color: var(--pink); letter-spacing: .08em; }
+.play-list a:hover, .play-list a:focus-visible { padding-left: 14px; color: var(--blue); }
+.play-main { padding-top: 72px; }
+.play-back { padding-top: 22px; }
+.play-main .card[id] { scroll-margin-top: 96px; }
+.play-foot { padding-block: 40px 30px; }
+@media (max-width: 860px) { .play-teaser { grid-template-columns: 1fr; } }
+.play-main #play { border-top: 0; padding-top: clamp(30px, 4vw, 52px); }

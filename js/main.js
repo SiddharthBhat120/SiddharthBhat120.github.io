@@ -125,7 +125,9 @@
       ['Kotlin', 'c-pink'], ['Jetpack Compose', ''], ['Flask', 'c-blue square'], ['scikit-learn', 'c-yellow'],
       ['JWT + RBAC', 'c-ink square'], ['PWA', 'c-pink round'], ['LLMs', 'c-blue round'], ['Electron', ''],
       ['SQLite', ''], ['IndexedDB', 'c-yellow'], ['Playwright', 'c-ink'], ['Vitest', ''], ['Git', 'c-pink round'],
-      ['WCAG 2.2', 'c-blue'], ['MySQL', ''], ['Framer Motion', 'c-pink'], ['Linux', 'c-ink round'], ['AI × Dev', 'c-yellow round']
+      ['WCAG 2.2', 'c-blue'], ['MySQL', ''], ['Framer Motion', 'c-pink'], ['Linux', 'c-ink round'], ['AI × Dev', 'c-yellow round'],
+      ['FastAPI', 'c-blue'], ['Next.js', 'c-ink'], ['Flutter', 'c-blue square'], ['Docker', ''], ['Whisper', 'c-pink'],
+      ['YOLO', 'c-yellow square'], ['Ollama', ''], ['OpenCV', 'c-pink square']
     ];
     let z = 10;
     const place = () => {
