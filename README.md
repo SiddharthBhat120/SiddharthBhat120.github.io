@@ -16,8 +16,8 @@ Then open http://localhost:5520.
 
 ## Publish on GitHub Pages
 
-1. Create a public repo named `SiddharthBhat120.github.io`.
+1. Create a public repo named `sidxcodes.github.io`.
 2. Push the contents of this folder to its `main` branch.
-3. The site goes live at https://siddharthbhat120.github.io (Settings → Pages if it doesn't appear).
+3. The site goes live at https://sidxcodes.github.io (Settings → Pages if it doesn't appear).
 
 When you change CSS/JS, bump the `?v=` number in the HTML so browsers load the new files.
