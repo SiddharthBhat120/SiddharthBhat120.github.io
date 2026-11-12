@@ -434,6 +434,8 @@ section { position: relative; }
 /* PotSpot art: rider moving along the mapped route */
 @keyframes ride { from { offset-distance: 0%; } to { offset-distance: 100%; } }
 .ride { offset-path: path('M196 296C232 286 236 238 274 232S334 248 362 190'); offset-rotate: 0deg; animation: ride 6s ease-in-out infinite alternate; }
+/* Tokenomy art: a request flowing through the router lane to the small model */
+.flow { offset-path: path('M64 218H150L250 222L282 214'); offset-rotate: 0deg; animation: ride 3.4s ease-in-out infinite; }
 
 .also { margin-top: 30px; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
 .also a { color: var(--ink); }

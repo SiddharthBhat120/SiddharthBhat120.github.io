@@ -60,6 +60,7 @@
         ['09  BlackBox      incident timeline · 34k log lines → 23 moments', ''],
         ['10  Humanize AI   writing suite · 10 modes · every edit explained', ''],
         ['11  PotSpot       pothole map from dashcam video · one dot per hole', ''],
+        ['12  Tokenomy      LLM gateway · cache, smart cache, cheap/strong routing', ''],
         ['→ scrolling you to them…', 'bl', () => document.getElementById('work').scrollIntoView({ behavior: 'smooth' })]
       ],
       skills: () => [
