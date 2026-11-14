@@ -725,6 +725,18 @@ section { position: relative; }
 .c-slide { grid-column: span 5; }
 .c-memory { grid-column: span 12; }
 
+/* rustbound: a full game that opens in its own tab */
+.c-rustbound { grid-column: span 12; }
+.rb-wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+.rb-shot { display: block; border: 1.5px solid var(--ink); background: var(--ink); aspect-ratio: 16 / 9; overflow: hidden; }
+.rb-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s var(--ease-spring, ease); }
+.rb-shot:hover img, .rb-shot:focus-visible img { transform: scale(1.03); }
+.rb-facts { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 6px; font-size: 14px; }
+.rb-facts li { padding-left: 16px; position: relative; }
+.rb-facts li::before { content: "✺"; position: absolute; left: 0; color: var(--pink); font-size: 11px; top: 2px; }
+.rb-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 980px) { .rb-wrap { grid-template-columns: 1fr; } }
+
 /* snake */
 .snake-wrap { display: grid; grid-template-columns: 1fr 170px; gap: 18px; align-items: start; }
 .snake-stage { position: relative; border: 1.5px solid var(--ink); background: var(--paper-2); aspect-ratio: 1; outline-offset: 3px; touch-action: none; }
